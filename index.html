@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Your Favourite Music is Here</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            color: deepblue;
+        }
+        
+        /* Additional styles for the login modal and search bar */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search songs...">
+    </div>
+    
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+            <li class="search-bar"><input type="text" placeholder="Search..."></li>
+            <li><a href="login.html">Login</a></li> <!-- Link to the separate login page -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songList">
+            <h1>Best of NCS- No Copyright Sounds</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="covers/1.jpg" alt="1">
+                    <span class="songName">Let me Love you</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="0"
+                                class="far songItemPlay fa-play-circle"></i><span class="songName"></span></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/5.jpg" alt="1">
+                    <span class="songName">Let me Love you</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="1"
+                                class="far songItemPlay fa-play-circle"></i><span class="songName"></span></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/2.jpg" alt="1">
+                    <span class="songName">Let me Love you</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="2"
+                                class="far songItemPlay fa-play-circle"></i><span class="songName"></span></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/3.jpg" alt="1">
+                    <span class="songName">Let me Love you</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="3"
+                                class="far songItemPlay fa-play-circle"></i><span class="songName"></span></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/4.jpg" alt="1">
+                    <span class="songName">Let me Love you</span>
+                    <span class="songlistplay"><span class="timestamp">05:34 <i id="4"
+                                class="far songItemPlay fa-play-circle"></i><span class="songName"></span></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <!--fontawesome icons-->
+            <i class="fas fa-2x fa-step-backward" id="previous"></i>
+            <i class="far fa-2x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-2x fa-step-forward" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">gvgf-Salam-e-Ishq</span>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
